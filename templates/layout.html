@@ -1,0 +1,94 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% block js %}{% endblock %}
+        {% block css %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <header>
+        <a href="{% url 'home:home' %}">
+          <div class="logo">JED Art Studio</div>
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">{% trans "Gallery" %}</a>
+            </li>
+            <li>
+              <a href="#">{% trans "Collections" %}</a>
+            </li>
+            <li>
+              <a href="#services">{% trans "Orders" %}</a>
+            </li>
+            <li>
+              <a href="#">{% trans "DIY" %}</a>
+            </li>
+            <li>
+              <a href="#">{% trans "Contact" %}</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="language-box">
+          <form action="{% url 'set_language' %} " method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" /> {% for language in languages %}
+            <a class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}" href="/{{ language.code }}{{request.get_full_path|slice:'3:' }}">
+              {{ language.code|upper }}
+            </a>
+            {% endfor %}
+          </form>
+        </div>
+      </header>
+
+        {% block body_content %}{% endblock %}
+
+        <footer>
+          <h4>Follow me!</h4>
+          <div class="social-links">
+            <a href="#">
+              <div class="social-icon instagram">
+                <img src="{% static 'icons/outline/instagram_256.png' %}" alt="instagram social link" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-icon facebook">
+                <img src="{% static 'icons/outline/facebook_256.png' %}" alt="facebook social link" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-icon twitter">
+                <img src="{% static 'icons/outline/twitter_256.png' %}" alt="twitter social link" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-icon youtube">
+                <img src="{% static 'icons/outline/youtube_256.png' %}" alt="youtube social link" />
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-icon pinterest">
+                <img src="{% static 'icons/outline/pinterest_256.png' %}" alt="pinterest social link" />
+              </div>
+            </a>
+          </div>
+          <div class="logo">
+            <h4>JED Art Studio</h4>
+          </div>
+        </footer>
+    </body>
+    
+    {% block bottom_page_js %}{% endblock %}
+</html>

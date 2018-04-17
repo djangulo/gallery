@@ -1,0 +1,32 @@
+// colors
+$dark-grey: #2e2a25;
+$deep-teal: #005360;
+$fadace: #fadace;
+$light-grey: #9a9a9a;
+$pastel-green: #cbe5df;
+$separator-bg: #f6f6f9;
+
+// Font stack
+$font-stack: 'Hind', sans-serif;
+
+$breakpoints: (
+  'tiny':   ( min-width:  480px ),
+  'small':  ( min-width:  767px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

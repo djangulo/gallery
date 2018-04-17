@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+html,
+body {
+  max-width: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: $font-stack;
+}
+
+// separator.component is populated with ng-content
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 8em;
+  background-color: #f6f6f9;
+  h2,
+  p {
+    color: $dark-grey;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+  }
+  p {
+    color: $light-grey;
+    font-size: 1em;
+    font-weight: 400;
+  }
+}

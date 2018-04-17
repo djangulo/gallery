@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}JED Art Studio{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block js %}
+{% endblock js %}
+
+{% block body_content %}
+  <div>
+    <div class="cover-image">
+      <div class="separator">
+        <h1>Mesages here</h1>
+        <p>To make it feel awesome</p>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div id="diy" class="diy left-img">
+      <span class="backdrop"></span>
+      <div class="image">
+        <img class="image" src="{% static 'images/diy.jpg' %}" />
+      </div>
+      <article class="text">
+        <h2>Do it yourself</h2>
+        <p>Learn to craft your own supplies with our DIY guides</p>
+      </article>
+    </div>
+    <div class="stories right-img">
+      <span class="backdrop coral"></span>
+      <div class="image">
+        <img class="image" src="{% static 'images/stories-by-victoria-bilsborough.jpg' %}" />
+      </div>
+      <article class="text">
+        <h2>Every painting has a story</h2>
+        <p>Read the inspiration and development behind every creation</p>
+      </article>
+    </div>
+  <div class="collections left-img">
+    <span class="backdrop coral"></span>
+    <div class="image">
+      <img src="{% static 'images/colors-peter-feghali.jpg' %}" />
+    </div>
+    <article class="text">
+      <h2>See our collections</h2>
+      <p>Read the inspiration and development behind every creation</p>
+    </article>
+  </div>
+
+{% endblock %}

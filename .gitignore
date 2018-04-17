@@ -1,11 +1,16 @@
 db.sqlite3
+node_modules
+
 geckodriver.log
 __pycache__
 *.pyc
 
 media
-secrets.py
+compiled_static
+assets
+*.bundle.*
 *_unsafe*
+secrets.py
 
 fablog.log
 
