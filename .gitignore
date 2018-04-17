@@ -1,0 +1,16 @@
+db.sqlite3
+geckodriver.log
+__pycache__
+*.pyc
+
+media
+secrets.py
+*_unsafe*
+
+fablog.log
+
+.env
+
+.coverage
+
+test_media
