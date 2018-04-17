@@ -20,25 +20,29 @@ body {
   font-family: $font-stack;
 }
 
-// separator.component is populated with ng-content
-.separator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 8em;
-  background-color: #f6f6f9;
-  h2,
-  p {
-    color: $dark-grey;
-    font-size: 1.8em;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1;
-  }
-  p {
-    color: $light-grey;
-    font-size: 1em;
-    font-weight: 400;
-  }
+.transparent {
+  background-color: rgba(246, 246, 249, 0.1);
 }
+
+// separator.component is populated with ng-content
+// .separator {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   height: 8em;
+//   background-color: #f6f6f9;
+//   h2,
+//   p {
+//     color: $dark-grey;
+//     font-size: 1.8em;
+//     font-weight: 700;
+//     text-align: center;
+//     line-height: 1;
+//   }
+//   p {
+//     color: $light-grey;
+//     font-size: 1em;
+//     font-weight: 400;
+//   }
+// }

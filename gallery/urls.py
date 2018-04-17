@@ -31,11 +31,12 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include(('home.urls', home))),
-    path('jsi18n/', JavaScriptCatalog.as_view(domain='djangojs', packages=[
-        'home',
-        'photoblog',
-        'accounts',
-        ]), name='javascript-catalog'),
+    path('gallery/', include(('photoblog.urls', photoblog), namespace='gallery')),
+    # path('jsi18n/', JavaScriptCatalog.as_view(domain='djangojs', packages=[
+    #     'home',
+    #     'photoblog',
+    #     'accounts',
+    #     ]), name='javascript-catalog'),
 )
 
 if settings.DEBUG:

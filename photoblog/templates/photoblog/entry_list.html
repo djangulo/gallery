@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}JED Art Studio | {% trans "Gallery" %}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+{% endblock %}
+
+{% block js %}
+{% endblock js %}
+
+{% block body_content %}
+  {% if entry_list != None %}
+    {% for e in entry_list %}
+    <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">{{ e.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ e.created_at|date:"DATE_FORMAT" }}
+          </h6>
+        </div>
+        <div class="card-body">
+          <img class="card-img-bottom" src="{{ e.cover.image }}" alt="{{ e.cover.caption }}">
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Nothing to show here!</p>
+  {% endif %}
+{% endblock %}

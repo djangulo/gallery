@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-17 18:59-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gallery/settings.py:128
+msgid "Spanish"
+msgstr "Espa&ntilde;"
+
+#: gallery/settings.py:129
+msgid "English"
+msgstr "Ingl$eacute;"
+
+#: home/templates/home/home.bundle.html:31 home/templates/home/home.html:31
+msgid "Do it yourself"
+msgstr "Hazlo tu mismo"
+
+#: home/templates/home/home.bundle.html:32 home/templates/home/home.html:32
+msgid "Learn to craft your own supplies with our DIY guides"
+msgstr "Aprenda a preparar sus propios materiales con nuestras gu&iacute;as"
+
+#: home/templates/home/home.bundle.html:41 home/templates/home/home.html:41
+msgid "Every painting has a story"
+msgstr "Cada pintura tiene su historia"
+
+#: home/templates/home/home.bundle.html:42
+#: home/templates/home/home.bundle.html:52 home/templates/home/home.html:42
+#: home/templates/home/home.html:52
+msgid "Read the inspiration and development behind every creation"
+msgstr ""
+"Lea la inspiraci&oacute;n y desarrollo detr&aacute;s de cada creaci&oacute;n"
+
+#: home/templates/home/home.bundle.html:51 home/templates/home/home.html:51
+msgid "See our collections"
+msgstr "Vea nuestras colecciones"
+
+#: templates/layout.html:28
+msgid "Gallery"
+msgstr "Galer&iacute;a"
+
+#: templates/layout.html:31
+msgid "Collections"
+msgstr "Colecciones"
+
+#: templates/layout.html:34
+msgid "Orders"
+msgstr "Ordenes"
+
+#: templates/layout.html:37
+msgid "DIY"
+msgstr "Construya"
+
+#: templates/layout.html:40
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/layout.html:63 templates/layout.html:68 templates/layout.html:73
+#: templates/layout.html:78 templates/layout.html:83
+msgid "social link"
+msgstr "enlace medios sociales"

@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from photoblog.models import Entry
+
+class EntryListView(ListView):
+    model = Entry
+    def get_queryset(self):
+        return super(EntryListView, self).get_queryset()

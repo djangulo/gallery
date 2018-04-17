@@ -25,13 +25,13 @@
         <nav>
           <ul>
             <li>
-              <a href="#">{% trans "Gallery" %}</a>
+              <a href="{% url 'gallery:entry-list' %}">{% trans "Gallery" %}</a>
             </li>
             <li>
               <a href="#">{% trans "Collections" %}</a>
             </li>
             <li>
-              <a href="#services">{% trans "Orders" %}</a>
+              <a href="#">{% trans "Orders" %}</a>
             </li>
             <li>
               <a href="#">{% trans "DIY" %}</a>
@@ -60,27 +60,27 @@
           <div class="social-links">
             <a href="#">
               <div class="social-icon instagram">
-                <img src="{% static 'icons/outline/instagram_256.png' %}" alt="instagram social link" />
+                <img src="{% static 'icons/outline/instagram_256.png' %}" alt="instagram {% trans 'social link' %}" />
               </div>
             </a>
             <a href="#">
               <div class="social-icon facebook">
-                <img src="{% static 'icons/outline/facebook_256.png' %}" alt="facebook social link" />
+                <img src="{% static 'icons/outline/facebook_256.png' %}" alt="facebook {% trans 'social link' %} " />
               </div>
             </a>
             <a href="#">
               <div class="social-icon twitter">
-                <img src="{% static 'icons/outline/twitter_256.png' %}" alt="twitter social link" />
+                <img src="{% static 'icons/outline/twitter_256.png' %}" alt="twitter {% trans 'social link' %} " />
               </div>
             </a>
             <a href="#">
               <div class="social-icon youtube">
-                <img src="{% static 'icons/outline/youtube_256.png' %}" alt="youtube social link" />
+                <img src="{% static 'icons/outline/youtube_256.png' %}" alt="youtube {% trans 'social link' %} " />
               </div>
             </a>
             <a href="#">
               <div class="social-icon pinterest">
-                <img src="{% static 'icons/outline/pinterest_256.png' %}" alt="pinterest social link" />
+                <img src="{% static 'icons/outline/pinterest_256.png' %}" alt="pinterest {% trans 'social link' %} " />
               </div>
             </a>
           </div>

@@ -129,6 +129,10 @@ LANGUAGES = [
     ('en', _("English")),
     # ('fr', _("French")),
 ]
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
 TIME_ZONE = 'UTC'
